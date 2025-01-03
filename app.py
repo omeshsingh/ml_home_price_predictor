@@ -8,6 +8,12 @@ app = Flask(__name__)
 
 CORS(app) 
 
+
+@app.route('/')
+def index():
+    return "Welcome to the Home Price Predictor API!"
+
+
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
     response = jsonify({
